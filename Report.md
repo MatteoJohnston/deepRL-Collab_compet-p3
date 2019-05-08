@@ -50,7 +50,7 @@ Before delving into the core of the exercise there are two two main key features
 1. **Multiple agents** &mdash; The Tennis environment has 2 different agents
 2. **Continuous action space** &mdash; The action space is now _continuous_, which allows each agent to execute more complex and precise movements. Even though each tennis agent can only move forward, backward, or jump, there's an unlimited range of possible action values that control these movements. Whereas, the agent in the Navigation project was limited to four _discrete_ actions: left, right, forward, backward.
 
-As articulated in our previous project, it is better to use a **policy-based method**. Policy-based methods are **well suited for continuous spaces**, hence they will be very useful in this context. Furthermore, differently from the value-based methods, they can learn also **stochastic policies** rather than just deterministic. Finally they can directly learn the optimal policy ![pi star](https://github.com/MatteoJohnston/deepRL-Continous_control-p2/pi_star.png) without having to maintain a separate value function estimate. Intuitively we can see how this can be a main advantage of the method both from a theoretical standpoint as well computational. Within the value-based methods, the agent uses its experience with the environment to maintain an estimate of the optimal action-value function, from which an optimal policy is derived. The computational cost for maintaining this estimate of the optimal action-value function can soon become expensive.
+As articulated in our previous project, it is better to use a **policy-based method**. Policy-based methods are **well suited for continuous spaces**, hence they will be very useful in this context. Furthermore, differently from the value-based methods, they can learn also **stochastic policies** rather than just deterministic. Finally they can directly learn the optimal policy 'pi* without having to maintain a separate value function estimate. Intuitively we can see how this can be a main advantage of the method both from a theoretical standpoint as well computational. Within the value-based methods, the agent uses its experience with the environment to maintain an estimate of the optimal action-value function, from which an optimal policy is derived. The computational cost for maintaining this estimate of the optimal action-value function can soon become expensive.
 
 
 ## Methodology: Multi-Agent Deep Deterministic Policy Gradient (MADDPG)
@@ -79,7 +79,7 @@ Our implementation however further differs because of the **decentralized actor 
 
 ## Actor-Critic models
 
-You can find actor-critic logic implemented here as part the `Agent()` class in `maddpg_agent.py` of the source code <img src="actor_critic network.png" align="bottom-left" alt="" title="actor critic network" />. 
+You can find actor-critic logic implemented here as part the `Agent()` class in `maddpg_agent.py` of the source code <img src="Actor critic network.PNG" align="bottom-left" alt="" title="actor critic network" />. 
 Please find the source code [here](https://github.com/MatteoJohnston/deepRL-Continous_control-p2/blob/master/ddpg_agent.py#L51).
 
 The gradient of the actor is now defined as:
