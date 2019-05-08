@@ -20,7 +20,7 @@ GAMMA = 0.99            # discount factor
 TAU = 1e-2              # for soft update of target parameters
 OU_SIGMA = 0.2          # Ornstein-Uhlenbeck noise parameter, volatility
 OU_THETA = 0.15         # Ornstein-Uhlenbeck noise parameter, speed of mean reversion
-EPSILON = 5.0          # initial value for epsilon in noise decay process in Agent.act()
+EPSILON = 5.0           # initial value for epsilon in noise decay process in Agent.act()
 EPSILON_DECAY = 1e-4    # epsilon decay
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
