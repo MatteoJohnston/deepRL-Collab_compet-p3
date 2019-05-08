@@ -38,7 +38,7 @@ Here are the high-level steps taken in building an agent that solves this enviro
 
 ## Benchmark: take a random action
 As part of project, we tried to solve the environment just by taking a random action (randomly distributed). Although naive this is "de-facto" an initial benchmarking exercise. 
-See the results ![Random action](https://github.com/MatteoJohnston/deepRL-Collab_compet-p3/blob/master/Random action.PNG)
+See the results <img src="Random action.PNG" align="bottom-left" alt="" title="Random action" />
 It is clear that we need to do a little more in order to solve the problem. In this particular the maximum score per episode was 0!
 
 ## "Know thyself": which algorithm to use
@@ -65,7 +65,7 @@ Our code base has been built upon the udacity repository, please find it here: [
 To make this algorithm suitable for the problem to solve, we followed the concepts discussed in [this paper](https://papers.nips.cc/paper/7217-multi-agent-actor-critic-for-mixed-cooperative-competitive-environments.pdf), _Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments_, by Lowe and Wu. In particular, we implemented their variation of the actor-critic method.
 
 The image below shows a general graphical representation of multi-agent actor-critic methods:
- ![Actor-critic architecture](https://github.com/MatteoJohnston/deepRL-Collab_compet-p3/blob/master/MADDPG network.PNG)
+ <img src="MADDPG network.PNG" align="bottom-left" alt="" title="MADDPG Network" />
 
 
 The algorithm used lives under the umbrella of the so called "actor-critic methods" which, in a nutshell, are a "generalized policy iteration" alternating between a policy evaluation and a policy improvement step.
@@ -79,11 +79,11 @@ Our implementation however further differs because of the **decentralized actor 
 
 ## Actor-Critic models
 
-You can find actor-critic logic implemented here as part the `Agent()` class in `maddpg_agent.py` of the source code ![Actor-critic network](https://github.com/MatteoJohnston/deepRL-Continous_control-p2/blob/master/actor_critic network.png). 
+You can find actor-critic logic implemented here as part the `Agent()` class in `maddpg_agent.py` of the source code <img src="actor_critic network.png" align="bottom-left" alt="" title="actor critic network" />. 
 Please find the source code [here](https://github.com/MatteoJohnston/deepRL-Continous_control-p2/blob/master/ddpg_agent.py#L51).
 
 The gradient of the actor is now defined as:
- ![Actor-critic architecture](https://github.com/MatteoJohnston/deepRL-Collab_compet-p3/blob/master/Gradient of actors.PNG)
+ <img src="Gradient of actors.PNG" align="bottom-left" alt="" title="gradient of actors" />
  
 Note: We're again using local and target networks to improve stability. This is where one set of parameters w is used to select the best action, and another set of parameters w' is used to evaluate that action. In this project, local and target networks are implemented separately for both the actor and the critic.
  
@@ -165,7 +165,7 @@ Please find its implementation [here](https://github.com/MatteoJohnston/deepRL-C
 ## Results 
 
 Please see our results. In fairness we didn't have a lot of time to experiment further we deem our solution to be satisfactory.
-![Final results](https://github.com/MatteoJohnston/deepRL-Collab_compet-p3/blob/master/Final results.PNG)
+<img src="Final results.PNG" align="bottom-left" alt="" title="Final results" />
 
 
 
